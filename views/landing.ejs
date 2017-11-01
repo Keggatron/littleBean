@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="/css/landing.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Courgette|Pacifico" rel="stylesheet">   
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" type="text/css" />
+        <script type="text/javascript" src="/script.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>liƚƚlɘ Bean Coffee</title>
+    </head>
+<body>
+    
+<header>
+    <nav class="navbar navbar-fixed-top" role="navigation"> 
+    
+        <div class="container-fluid">
+            
+            <div class="lb-nav-wrapper">
+                
+                <div class="navbar-header">
+                    
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#lb-menu">
+                        
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        
+                        
+                    </button>     
+                    
+                    <a class="navbar-brand" id="nav-logo" href="/">
+                        <span id="nav-logo-little">little</span>
+                        <span id="nav-logo-bean">Bean</span>
+                    </a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="lb-menu">
+                    <ul class="nav navbar-nav">
+                        <% if(!currentUser) { %>
+                            <li><a href="/register">Register</a></li> 
+                            <li><a href="/login">Sign In</a></li> 
+                            <li><a href="#our-coffee">Our Coffee</a></li> 
+                            <li><a href="#about-us">About Us</a></li> 
+                            <li><a href="#updates">Updates</a></li> 
+                            <li><a href="#contacts">Contact Us</a></li> 
+                        <% } else { %>    
+                            <li><a href="/user/<%= currentUser._id %>" > <%= currentUser.name %> </a></li>
+                            <li><a href="/order">Order</a></li> 
+                            <li><a href="/logout">Logout</a></li> 
+                        <% } %>        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+    
+    </nav>
+    
+</header>    
+
+<section id="home">
+    <div id="home-cover" class="lb-parallax animated fadeIn">
+        <div id="home-content-box">
+            <div id="home-content-box-inner">
+                <div class="animated fadeInDown" id="home-heading">
+                    <h1 id="home-head-text"><span class="little-title">little</span> <span class="bean-title">Bean</span></h1>
+                    <hr class="generic-hr">
+                    <h5 id="home-head-subtext">coffee co.</h5>
+                    <div>
+                         <div id="home-btn" class="animated zoomIn">
+                            <a class="btn-general btn-white btn btn-lg" href="/register" role="button" title="register">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<section id="our-coffee">
+    
+    <!--background photo for right side with parallax scroll-->
+    <div id="our-coffee-bg-right-side" class="lb-parallax"></div>
+    
+    <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-md-4 col-sm-12">
+                
+                <div id="our-coffee-content-box">
+                    
+                    <div id="our-coffee-content-box-outer">
+                        
+                        <div id="our-coffee-content-box-inner">
+                            <div class="content-title wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                                <h3>Our Coffee</h3>
+                                <hr class="generic-hr">  
+                            </div>
+                            <div id="our-coffee-description" class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                                <p>We have the highest quality coffee in Yellowknife with the most loyal customers because of the quality. Slow roasted in Vancouver, our Go-Go Espresso coffee beans area a mixture of three different
+                                beans that combine to brew the perfect cup. Register today to get put on our ordering list!</p>
+                            </div>
+                            
+                            <div id="about-btn">
+                                        <a class="btn btn-lg btn-general btn-green wow zoomIn" data-wow-duration="1s" data-wow-delay="1s" href="/register" role="button"> Register Here</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                            
+                </div>    
+                
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+
+<section id="about-us" >
+        <div class="container">
+            <div class="row wow fadeInUp">
+                
+                 <div class="col-md-6 col-sm-12" id="about-us-image">
+                    <img id="darce" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s" src="../images/darce.jpg"></img>
+                </div>   
+                
+                <div class="col-md-6 col-sm-12" id="about-us-text-content">
+                    <div id="au-content-box-outer">
+                        <div id="au-content-box-inner">
+                            <div class="content-title wow fadeInDown">
+                                <h3 >About Us</h3>
+                                <hr class="generic-hr">  
+                            </div>
+                            
+                            <div id="au-content-description" class=".align-middle">
+                                <p>Little Bean started out in 2012 with three Yellowknifers owning a coffee shop named Rustico in Vancouver, BC. After years of successful business, we sold the shop in 2016. 
+                                During the period in which we owned the business we developed new vendor relationships and decided to keep selling the coffee blend that we had created. etc....</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                        
+                </div>
+                
+                 
+            </div>
+        </div>
+</section>
+
+<section id="updates">
+    <div id="updates-content-box-outer">
+        <div id="updates-content-box-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="content-title wow fadeInDown" id="updates-header">
+                        <h3>Updates</h3>
+                        <hr class="generic-hr">
+                    </div>
+                    <div class="col-sm-12 col-md-6 wow fadeInLeft">
+                        <div id="updates-content-description">
+                            <% if(!update) { %>
+                                <h3>No Current Updates</h3>
+                            <% } else { %>
+                                <div id ="updates-title">
+                                    <h3> <%= update.updateTitle %></h3>
+                                </div>
+                                <div id="updates-date">
+                                    <span> <%= update.updateCreated.toDateString() %></span> 
+                                </div>
+                                <div id="updates-body">
+                                    <p><%= update.updateBody %> </p>
+                                </div>
+                              
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 wow fadeInRight" id="updates-image">
+                        <img class="img-responsive" src="<%= update.updateImage %>"></img>
+                    </div>
+                    <% } %>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <% if (currentUser && currentUser.name === "Admin"){%>
+        <div class="container">
+            <div class="row">
+                <h1 style="text-align: center">Create a new Update Post</h1>
+                <div style="width: 30%; margin: 30px auto">
+                    <form action = "/" method="POST">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Title of Update" name="updateTitle"/>
+                        </div> 
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Image URL" name="updateImage"/>
+                        </div> 
+                        <div class="form-group">
+                            <textarea class="form-control" rows= "10" placeholder="Body of Update" name="updateBody"/></textarea>
+                        </div> 
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <% } %>
+    
+</section>
+
+<section id="contact-us">
+    <div class="container">
+        <div class=""></div>
+    </div>
+    
+</section>
+
+
+
+
+
+<% include ./partials/footer%>

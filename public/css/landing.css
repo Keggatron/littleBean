@@ -1,0 +1,348 @@
+html, body {
+    height: 100%;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
+.content-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 30px 0;
+    color: #08A045;
+    text-transform: uppercase;
+}
+
+/*Home Section*/
+
+#home{
+    height:100%;
+}
+
+#home-cover{
+    height: 100%;
+    background-image: url("../images/bean-close.jpg");
+}
+
+#home-content-box{
+    width: 100%;
+    height:100%;
+    display: table;
+}
+
+#home-content-box-inner{
+    display: table-cell;
+    /*vertical-align: middle;*/
+}
+
+#home-heading{
+    background-color:#000;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6em 0 0 -20em;
+    height: 8em;
+    width: 40em;
+    text-align: center;
+    display: table;
+    border-radius: 50%;
+    z-index: 1;
+    border: 5px solid #FFBF00;
+}
+
+#home-head-text{
+    vertical-align: middle;
+    margin-bottom:5px;
+}
+
+#home-content-box-inner{
+    color:#fff;
+    
+}
+
+.little-title{
+    font-family: 'Courgette', cursive;
+    font-size:2em;
+    color: #08A045;
+    
+}
+
+.bean-title{
+    font-family: 'Pacifico', cursive;
+    font-size:2em;
+    color:#fff;
+}
+
+.generic-hr{
+    border-top: 1px solid #FFBF00;
+    margin-top:0;
+    margin-bottom:0;
+    width:50%;
+}
+
+#home-head-subtext{
+    font-family: 'Pacifico', cursive;
+    line-height: .5em;
+    font-size: 1.2em;
+    padding-bottom: .5em;
+}
+
+/*parallax images*/
+
+.lb-parallax{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*buttons*/
+
+.btn-general{
+    border-width: 2px;
+    border-radius: 0;
+    padding: 9px 26px 9px 26px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: .8em;
+}
+    
+.btn-white {
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-white:hover, 
+.btn-white:focus {
+    background-color: #fff;
+    color: #41464B;
+
+}
+
+.btn-green {
+    border-color: #08A045;
+    color: #08A045;
+}
+
+.btn-green:hover, 
+.btn-green:focus {
+    background-color: #08A045;
+    color: #fff;
+
+}
+
+
+/*======NavBar======*/
+.navbar{
+    padding: 20px 0;
+    transition: all .5s ease-in-out;
+}
+
+.lb-top-nav {
+    background: rgba(0,0,0,0.7);
+    padding: 7px 0;
+}
+
+.lb-nav-wrapper {
+    padding: 0 85px;
+}
+
+.navbar-nav {
+    float:right;
+}
+
+#nav-logo-little{
+    font-family: 'Courgette', cursive;
+    font-size:1.2em;
+    color: #08A045;
+}
+
+#nav-logo-bean {
+    font-family: 'Pacifico', cursive;
+    font-size:1.2em;
+    color:#fff;
+}
+
+#lb-menu {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.navbar-nav > li > a{
+    color: #fff !important; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus{
+    color: #08A045 !important;
+    background: none;
+}
+
+.navbar-toggle {
+    background-color: rgba(0,0,0, 0.1);
+    border: 1px solid white;
+    border-radius: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-collapse {
+    max-height: none !important;
+}
+
+/*Animation*/
+#home-cover, #home-heading, #home-btn{
+    animation-duration: .5s;
+}
+
+#home-cover{
+    animation-delay: .1s;
+}
+
+#home-heading{
+    animation-delay: .5s;
+}
+
+#home-btn{
+    animation-delay: 1s;
+}
+
+/*=======Our Coffee Section======*/
+
+#our-coffee {
+    margin-bottom: 50px;
+}
+
+#our-coffee-bg-right-side {
+    width: 60%;
+    height: 600px;
+    float: right;
+    background-image: url(../images/more-cup-coffee.jpeg);
+    margin-top: 100px;
+    /*border-top: 600px solid transparent;*/
+    /*border-right: 250px solid white;*/
+    /*border-left: 250px solid white;*/
+    /*border-bottom: 600px solid transparent;*/
+   
+}
+
+#our-coffee-content-box {
+    float: left;
+    height: 700px;
+}
+
+#our-coffee-content-box-outer {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#our-coffee-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#our-coffee .generic-hr {
+    margin-bottom: 30px;
+}
+
+/*=======About Us Section=====*/
+
+#about-us {
+    background-color: #08A045;
+}
+
+#darce{
+    background-attachment: fixed;
+}
+
+#about-us-text-content {
+    height: 100%;
+}
+
+#au-content-box-outer{
+    width:100%;
+    height: 100%;
+    display: table;
+}
+
+#au-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#about-us-text-content {
+    text-align: center;
+        padding: 20% 0;
+}
+
+#about-us-image {
+    text-align: center;
+    padding: 40px 0;
+
+}
+
+#about-us .generic-hr {
+    margin-bottom: 30px;
+}
+
+#about-us h3 {
+    color: #FFBF00;
+}
+
+#about-us p {
+    color: #fff;
+}
+
+/*========Updates Section=======*/
+
+#updates {
+    margin-top: 30px;
+}
+
+#updates-content-box-outer{
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+#updates-content-box-inner{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#updates-header {
+    margin-bottom: 60px;
+}
+
+#updates .generic-hr {
+    margin-bottom: 30px;
+}
+
+#updates-title {
+    color: #08A045;
+    margin-bottom: 20px;
+}
+
+#updates hr{
+    width: 30%;
+}
+
+#updates-content-description {
+    margin-bottom: 50px;
+}
+
+#updates-image {
+    vertical-align: middle;
+     padding: 10% 0;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

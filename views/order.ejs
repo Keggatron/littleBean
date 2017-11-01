@@ -1,0 +1,36 @@
+<% include ./partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1>Order Page</h1>
+
+        <form action="/order" method="POST">
+            <div class="form-group">
+                <label>Full Name</label><br>
+                <input type="text" name="name" id="" placeholder="Full Name" value="<%= user.name %>"> </input>
+            </div>
+            <div class="form-group">
+                <label>Address</label><br>
+                <input type="text" name="address" id="" placeholder="Address"></input>
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label><br>
+                <input type="text" name="phone" id="" placeholder="Phone #"></input>
+            </div>
+            <div class="form-group">
+                <label>How many bags of coffee do you want to order?</label><br>
+                <input type="text" name="quantity" id="quantity" placeholder="Quantity"></input>
+            </div>
+            
+            
+            
+            
+            <button>Submit!</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<% include ./partials/footer%>

@@ -1,0 +1,21 @@
+<% include ./partials/header%>
+    <div class="register-fields">
+      <p>
+        <input id="name-reg" type="text" placeholder="Full Name">
+        <input id="email-reg" type="text" placeholder="Email">
+        <input id="pw-reg" type="password" placeholder="Password">
+        <input id="pw-reg1" type="password" placeholder="Retype Password">
+        <button id="reg-button">Register</button><br>
+        <span id="msg-reg"></span>
+      </p>
+      <hr>
+      <p>
+        <input id="email-resend" type="text" placeholder="Email">
+        <button onclick="resend()">Resend Verification Email</button><br>
+        <span id="msg-resend"></span>
+      </p>
+      
+    </div>
+    
+ 
+<% include ./partials/footer%>

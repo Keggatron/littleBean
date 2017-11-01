@@ -1,0 +1,147 @@
+<% include ./partials/header%>
+
+<!--show open and complete orders tabs-->
+<div class="tab">
+  <button class="tablinks" onclick="openOrderStatus(event, 'Open')"  id="defaultOpen">Open Orders</button>
+  <button class="tablinks" onclick="openOrderStatus(event, 'Completed')">Completed Order</button>
+</div>
+
+<div id="Open" class="tabcontent">
+  <h1>Welcome to the Users' page: <%= currentUser.name %></h1>
+  <div class="container order-container">
+    <h3>Open Orders</h3>
+    <div class="row">
+        <div class="col-sm-2">
+            Name
+        </div>
+        <div class="col-sm-3">
+            Address
+        </div>
+        <div class="col-sm-2">
+            Phone Number
+        </div>
+        <div class="col-sm-2">
+            Quantity
+        </div> 
+        <div class="col-sm-1">
+            
+        </div> 
+        <div class="col-sm-1">
+            
+        </div>
+        <div class="col-sm-1">
+            
+        </div>
+    </div>
+            <% for(var i = 0; i < user.length; i++) { %>
+                <% user[i].orders.forEach(function(order){ %>
+                    <% if (order.orderComplete === false) {%>
+                    <div class="row order-table">
+                        <form action="/order/<%= order.id%>?_method=PUT" method="POST">
+                        <div class="col-sm-2 order-info" id="order-info-name">
+                            <input class="order-box" type="text" name = "order[nameOfOrder]" value="<%= order.nameOnOrder %>"></<input>
+                        </div>
+                        <div class="col-sm-3 order-info">
+                            <input class="order-box" type="text" name = "order[address]" value="<%= order.address %>"></<input>
+                        </div>
+                        <div class="col-sm-2 order-info">
+                            <input class="order-box" type="text" name = "order[phone]" value="<%= order.phone %>"></<input>
+                        </div>
+                        <div class="col-sm-2 order-info" id="order-info-quantity">
+                            <input class="order-box" type="text" name = "order[quantity]" value="<%= order.quantity %>"></<input>
+                        </div>
+                        
+                        
+        
+                        <div class="col-md-2">
+                            <input id="update-btn" type="submit" class= "btn btn-xs btn-warning" value="Update" />
+                        
+                         </form>
+                        
+                            <form class="delete-form" action="/order/<%= order.id%>/?_method=DELETE" method="POST">
+                                <input type="submit" class= "btn btn-xs btn-danger" value="Delete" />
+                            </form>
+                        </div>
+                        <% if (currentUser.email === "admin@littlebeancoffeecompany.com"){%>
+                        <div class="col-md-1">
+                            <form action="/order/complete/<%= order.id%>?_method=PUT" method="POST">
+                                <input type="submit" class="btn btn-xs btn-success" value="Completed"/>
+                            </form> 
+                        </div>
+                        <% } %>
+                    </div>
+                    <% } %>
+                <% }); %>
+            <% }; %>
+       </div>
+</div>
+
+<div id="Completed" class="tabcontent">
+  
+  <h1>Welcome to the Users' page: <%= currentUser.name %></h1>
+  
+  <div class="container order-container">
+    <h3>Completed Orders</h3>
+    <div class="row">
+        <div class="col-sm-2">
+            Name
+        </div>
+        <div class="col-sm-3">
+            Address
+        </div>
+        <div class="col-sm-2">
+            Phone Number
+        </div>
+        <div class="col-sm-2">
+            Quantity
+        </div> 
+        <div class="col-sm-2">
+            Order Completed Date
+        </div> 
+        <div class="col-sm-1">
+            
+        </div>
+        
+    </div>
+            <% for(var i = 0; i < user.length; i++) { %>
+                <% user[i].orders.forEach(function(order){ %>
+                    <% if (order.orderComplete !== false) {%>
+                    <div class="row order-table">
+                        <form action="/order/<%= order.id%>?_method=PUT" method="POST">
+                        <div class="col-sm-2 order-info" id="order-info-name">
+                            <input class="order-box" type="text" name = "order[nameOfOrder]" value="<%= order.nameOnOrder %>"></<input>
+                        </div>
+                        <div class="col-sm-3 order-info">
+                            <input class="order-box" type="text" name = "order[address]" value="<%= order.address %>"></<input>
+                        </div>
+                        <div class="col-sm-2 order-info">
+                            <input class="order-box" type="text" name = "order[phone]" value="<%= order.phone %>"></<input>
+                        </div>
+                        <div class="col-sm-2 order-info" id="order-info-quantity">
+                            <input class="order-box" type="text" name = "order[quantity]" value="<%= order.quantity %>"></<input>
+                        </div>
+                        <div class="col-sm-2 order-info" id="order-info-quantity">
+                           
+                            <input class="order-box" type="text" name = "order[completedDate]" value="<%= order.completedDate %>"></<input>
+                        </div>
+                        
+                        
+        
+                        <% if (currentUser.name === "Admin"){%>
+                        <div class="col-md-1">
+                            <form action="/order/complete/<%= order.id%>?_method=PUT" method="POST">
+                                <input type="submit" class="btn btn-xs btn-success" value="Completed"/>
+                            </form> 
+                        </div>
+                        <% } %>
+                    </div>
+                    <% } %>
+                <% }); %>
+            <% }; %>
+       </div>
+</div>
+
+
+   
+
+<% include ./partials/footer%>

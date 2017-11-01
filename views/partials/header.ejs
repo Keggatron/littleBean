@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="/css/landing.css" type="text/css" />
+        <link rel="stylesheet" href="/css/index.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Courgette|Pacifico" rel="stylesheet">   
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" type="text/css" />
+        <title>liƚƚlɘ Bean Coffee</title>
+    </head>
+<body>
+    
+<header>
+    <nav class="navbar navbar-inverse" role="navigation"> 
+    
+        <div class="container-fluid">
+            
+            <div class="lb-nav-wrapper">
+                
+                <div class="navbar-header">
+                    
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#lb-menu">
+                        
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        
+                        
+                    </button>     
+                    
+                    <a class="navbar-brand" id="nav-logo" href="/">
+                        <span id="nav-logo-little">little</span>
+                        <span id="nav-logo-bean">Bean</span>
+                    </a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="lb-menu">
+                    <ul class="nav navbar-nav">
+                        <!--if no user then show-->
+                    <% if(!currentUser) { %>    
+                        <li><a href="/register">Register</a></li> 
+                        <li><a href="/login">Sign In</a></li> 
+                    <% } else { %>    
+                        <li><a href="/user/<%= currentUser._id %>" > <%= currentUser.name %> </a></li>
+                        <li><a href="/order">Order</a></li> 
+                        <li><a href="/logout">Logout</a></li> 
+                    <% } %>    
+                        
+                        
+                        <li><a href="#contacts">Contact Us</a></li> 
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+    
+    </nav>
+    
+</header>    
+
+<div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%=error%>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%=success%>
+            </div>
+        <% } %>
+    </div>
